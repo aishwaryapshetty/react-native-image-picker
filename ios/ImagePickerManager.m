@@ -144,8 +144,11 @@ RCT_EXPORT_METHOD(showImagePicker:(NSDictionary *)options callback:(RCTResponseS
             self.picker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
         }
         else { // "back"
+                    self.picker.showsCameraControls=NO;
             self.picker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
         }
+                self.picker.showsCameraControls=NO;
+
 #endif
     }
     else { // RNImagePickerTargetLibrarySingleImage
